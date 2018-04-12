@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-warning">
+    <a href="/" class="navbar-brand mx-auto">javascript Chat APP </a>
+  </nav>
+
+  <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+    <div class="card-header">
+      <h3>输入你的昵称</h3>
+    </div>
+    <p id="nickError"></p>
+    <div class="card-body">
+      <form action="" id="nickForm">
+        <input type="text" id="nickname" class="form-control">
+        <!-- <input type="submit" name="" id="" value="OK" class="btn btn-warning btn-block mt-2"> -->
+        <button type="submit" class="btn btn-warning btn-block mt-2">
+            <i class="fas fa-location-arrow"></i>  OK!酷炫
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container" id="contentWrap">
+    <div class="row mt-2">
+      <div class="col-md-6 offset-md-1">
+        <div class="card">
+          <div class="card-header">
+            <h4>lst's Chat</h4>
+          </div>
+          <div class="card-body" id="chat">
+          </div>
+          <form action="" class="card-footer" id="message-form">
+            <div class="input-group">
+                <input type="text" id="message" class="form-control">
+                <div class="input-group-append">
+                  <!-- <input type="submit" class="btn btn-warning"> -->
+                  <button type="submit" class="btn btn-warning">
+                      <i class="fas fa-location-arrow"></i>发送
+                  </button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+              <h3>用户列表</h3>
+            </div>
+            <div class="card-body">
+              <div id="usernames">
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
